@@ -6,7 +6,9 @@
     "add-model": "node scripts/add-model.mjs",
     "build": "node scripts/build-pages.mjs",
     "qr": "node scripts/make-qr.mjs",
-    "serve": "node scripts/serve.mjs"
+    "serve": "node scripts/serve.mjs",
+    "fetch-polyhaven": "node scripts/fetch-polyhaven.mjs",
+    "posters": "node scripts/make-posters.mjs"
   },
   "devDependencies": {
     "@gltf-transform/core": "^4.5.1",
@@ -15,6 +17,7 @@
     "draco3dgltf": "^1.5.7",
     "meshoptimizer": "^1.3.0",
     "obj2gltf": "^3.2.0",
+    "puppeteer-core": "^24.10.0",
     "qrcode": "^1.5.4",
     "sharp": "^0.35.5"
   }

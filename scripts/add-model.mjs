@@ -123,14 +123,19 @@ if (args.usdz) {
 // 5. Record it and report.
 const after = getBounds(scene);
 const dimensionsCm = after.max.map((v, i) => Math.round((v - after.min[i]) * 1000) / 10);
-const models = readModels().filter((m) => m.id !== args.id);
-models.push({
+// Re-running for an existing id keeps its menu details (category, price, description, credit).
+const models = readModels();
+const existing = models.find((m) => m.id === args.id);
+const entry = {
+  ...existing,
   id: args.id,
-  name: args.name || args.id,
+  name: args.name || existing?.name || args.id,
   glb: `${args.id}.glb`,
-  usdz,
+  usdz: usdz || existing?.usdz || null,
   dimensionsCm: { width: dimensionsCm[0], height: dimensionsCm[1], depth: dimensionsCm[2] },
-});
+};
+if (existing) models[models.indexOf(existing)] = entry;
+else models.push(entry);
 writeModels(models);
 
 console.log(`Output: ${path.relative(process.cwd(), outFile)} (${formatMB(outBytes)})`);

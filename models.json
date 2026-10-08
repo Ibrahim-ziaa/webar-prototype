@@ -1,13 +1,22 @@
 [
   {
-    "id": "avocado",
-    "name": "Avocado",
-    "glb": "avocado.glb",
-    "usdz": "avocado.usdz",
+    "id": "strawberry-chocolate-cake",
+    "name": "Strawberry Chocolate Cake",
+    "glb": "strawberry-chocolate-cake.glb",
+    "usdz": "strawberry-chocolate-cake.usdz",
     "dimensionsCm": {
-      "width": 5.4,
-      "height": 8,
-      "depth": 3.5
+      "width": 24.4,
+      "height": 7.9,
+      "depth": 24
+    },
+    "category": "Cakes",
+    "price": 3200,
+    "description": "Rich chocolate sponge topped with fresh sliced strawberries and chocolate crumb. Serves 8.",
+    "credit": {
+      "author": "Kuutti Siitonen",
+      "source": "Poly Haven",
+      "url": "https://polyhaven.com/a/strawberry_chocolate_cake",
+      "license": "CC0"
     }
   },
   {
@@ -19,17 +28,75 @@
       "width": 22.5,
       "height": 9.7,
       "depth": 22.5
+    },
+    "category": "Cakes",
+    "price": 2800,
+    "description": "Moist spiced carrot cake with cream cheese frosting and toasted walnuts. Serves 8.",
+    "credit": {
+      "author": "Greg Zaal, James Ray Cock",
+      "source": "Poly Haven",
+      "url": "https://polyhaven.com/a/carrot_cake",
+      "license": "CC0"
     }
   },
   {
     "id": "croissant",
-    "name": "Croissant",
+    "name": "Butter Croissant",
     "glb": "croissant.glb",
     "usdz": "croissant.usdz",
     "dimensionsCm": {
       "width": 20,
       "height": 6.2,
       "depth": 7.6
+    },
+    "category": "Bakery",
+    "price": 450,
+    "description": "Flaky, golden, all-butter croissant baked fresh every morning.",
+    "credit": {
+      "author": "Dario Barresi, Greg Zaal",
+      "source": "Poly Haven",
+      "url": "https://polyhaven.com/a/croissant",
+      "license": "CC0"
+    }
+  },
+  {
+    "id": "bread-rolls",
+    "name": "Fresh Bread Rolls",
+    "glb": "bread-rolls.glb",
+    "usdz": "bread-rolls.usdz",
+    "dimensionsCm": {
+      "width": 39.7,
+      "height": 6.3,
+      "depth": 11.4
+    },
+    "category": "Bakery",
+    "price": 350,
+    "description": "Three soft, golden bread rolls, baked in house. Perfect with soup.",
+    "credit": {
+      "author": "Alexander Shulha",
+      "source": "Poly Haven",
+      "url": "https://polyhaven.com/a/hamburger_buns",
+      "license": "CC0"
+    }
+  },
+  {
+    "id": "pomegranate",
+    "name": "Fresh Pomegranate",
+    "glb": "pomegranate.glb",
+    "usdz": "pomegranate.usdz",
+    "dimensionsCm": {
+      "width": 11.4,
+      "height": 11.5,
+      "depth": 11.5
+    },
+    "category": "Fresh",
+    "price": 300,
+    "description": "A whole seasonal anar (pomegranate), sweet and juicy. Ask us to juice it.",
+    "credit": {
+      "author": "Oliver Harries",
+      "source": "Poly Haven",
+      "url": "https://polyhaven.com/a/food_pomegranate_01",
+      "license": "CC0"
     }
   }
 ]
