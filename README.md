@@ -32,7 +32,7 @@ Requires Node 20 or newer and Google Chrome. Run `npm install` once.
 
 ## Change the restaurant
 
-Edit `restaurant.json` (name, tagline, currency, and the order of categories), then `npm run build`.
+Edit `restaurant.json` (name, tagline, currency symbol, the price note shown in the footer, and the order of categories), then `npm run build`. Each dish in `models.json` can also list `ingredients` and `allergens`, which show on its card.
 
 ## Add a dish
 
@@ -127,14 +127,10 @@ The demo dishes are real photo scans published on [Sketchfab](https://sketchfab.
 
 | Dish | Scan by |
 |---|---|
-| Vegetable Samosa, Chicken Biryani, Butter Chicken | seirogan |
-| Doner Kebab Plate | Enlil Scan |
-| Wood-Fired Pizza | Rigsters |
-| Smash Burger & Fries, Fresh Fruit Tart | Keith Ito |
-| Grilled T-Bone Steak | Shahriar Shahrabi |
+| Bresaola & Rocket Pizza | Rigsters |
 | Pappardelle Bolognese | BrandXR |
+| Grilled T-Bone Steak | Shahriar Shahrabi |
+| Smash Burger & Fries, Fresh Fruit Tart | Keith Ito |
 | Chocolate Fondant, Beetroot Cheesecake | alban |
-| Chocolate Mousse Cake | Spenser C Dickerson |
-| Cappuccino | Krzysztof Mazia |
 
-Dish names, prices and descriptions are placeholders written for the demo, and "The Demo Kitchen" is a made-up name. For a real restaurant, scan its own dishes.
+"Ember & Sage" is a fictional restaurant: the name, prices, descriptions and ingredient lists were written for this prototype (ingredients follow standard restaurant recipes for each dish). For a real restaurant, scan its own dishes and use its own menu.

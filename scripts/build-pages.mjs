@@ -18,11 +18,15 @@ console.log(`Built menu with ${models.length} dish(es): public/index.html`);
 
 function size(m) {
   const d = m.dimensionsCm;
-  return `${Math.round(d.width)} × ${Math.round(d.depth)} cm, ${Math.round(d.height)} cm tall`;
+  const inch = (cm) => Math.round(cm / 2.54 * 2) / 2; // nearest half inch
+  return `${inch(d.width)} × ${inch(d.depth)} in, ${inch(d.height)} in tall (${Math.round(d.width)} × ${Math.round(d.depth)} cm)`;
 }
 
 function price(m) {
-  return m.price ? `${restaurant.currency} ${m.price.toLocaleString('en-US')}` : '';
+  if (!m.price) return '';
+  // Symbols like $ sit right against the number; codes like Rs get a space.
+  const gap = /^[A-Za-z]/.test(restaurant.currency) ? ' ' : '';
+  return `${restaurant.currency}${gap}${m.price.toLocaleString('en-US')}`;
 }
 
 function dish(m) {
@@ -33,7 +37,9 @@ function dish(m) {
           <span class="badge">3D · AR</span>
         </button>
         <h3><span>${escapeHtml(m.name)}</span><span class="leader"></span><span class="price">${price(m)}</span></h3>
-        <p>${escapeHtml(m.description || '')}</p>
+        <p>${escapeHtml(m.description || '')}</p>${m.ingredients ? `
+        <p class="ingredients">${escapeHtml(m.ingredients.join(', '))}</p>` : ''}${m.allergens ? `
+        <p class="allergens">Contains: ${escapeHtml(m.allergens.join(' · '))}</p>` : ''}
         <button class="see" data-id="${m.id}">See it on your table</button>
       </article>`;
 }
@@ -52,7 +58,7 @@ function menuPage() {
     </section>`).join('');
 
   const data = Object.fromEntries(models.map((m) => [m.id, {
-    name: m.name, price: price(m), size: size(m),
+    name: m.name, price: price(m), size: size(m), ingredients: (m.ingredients || []).join(', '),
     glb: `models/${m.glb}`, usdz: m.usdz ? `models/${m.usdz}` : null, poster: `posters/${m.id}.webp`,
   }]));
 
@@ -89,8 +95,9 @@ function menuPage() {
   </main>
 
   <footer>
-    <p>Prices in Pakistani Rupees, inclusive of tax.</p>
-    <p class="credits">3D scans: ${credits}</p>
+    <p>${escapeHtml(restaurant.priceNote || '')}</p>
+    <p>Please tell your server about any allergies before ordering.</p>
+    <details class="credits"><summary>Image credits</summary><p>${credits}</p></details>
   </footer>
 
   <dialog id="viewer">
@@ -109,6 +116,7 @@ function menuPage() {
     </model-viewer>
     <div class="viewer-info">
       <h3><span id="v-name"></span><span class="price" id="v-price"></span></h3>
+      <p id="v-ingredients" class="ingredients"></p>
       <p id="v-size"></p>
       <p id="v-help" class="warn" hidden>
         AR isn't available in this browser. On Android open this menu in Chrome, on iPhone in Safari.
@@ -132,6 +140,7 @@ function menuPage() {
       viewer.alt = '3D model of ' + d.name;
       document.getElementById('v-name').textContent = d.name;
       document.getElementById('v-price').textContent = d.price;
+      document.getElementById('v-ingredients').textContent = d.ingredients;
       document.getElementById('v-size').textContent = 'Actual size: ' + d.size;
       help.hidden = true;
       dialog.showModal();

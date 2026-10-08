@@ -1,6 +1,7 @@
 {
-  "name": "The Demo Kitchen",
-  "tagline": "Desi classics, grills and desserts",
-  "currency": "Rs",
-  "categories": ["Starters", "Desi Mains", "Grill & Continental", "Desserts", "Coffee"]
+  "name": "Ember & Sage",
+  "tagline": "Wood-fired, grilled and handmade",
+  "currency": "$",
+  "priceNote": "All prices are in US dollars.",
+  "categories": ["Pizza & Pasta", "From the Grill", "Desserts"]
 }
