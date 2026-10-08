@@ -1,87 +1,7 @@
 [
   {
-    "id": "samosa",
-    "name": "Vegetable Samosa",
-    "glb": "samosa.glb",
-    "usdz": "samosa.usdz",
-    "dimensionsCm": {
-      "width": 18,
-      "height": 8.1,
-      "depth": 18
-    },
-    "category": "Starters",
-    "price": 450,
-    "description": "Two crisp, hand-folded pastries filled with spiced potato and peas. Served with tamarind and mint chutney.",
-    "credit": {
-      "author": "seirogan",
-      "source": "Sketchfab",
-      "url": "https://sketchfab.com/3d-models/samosa-scans-with-iphone12-pro-trnio-63c8cc6b0f8a482cadc653b84019e784",
-      "license": "CC BY 4.0"
-    }
-  },
-  {
-    "id": "chicken-biryani",
-    "name": "Chicken Biryani",
-    "glb": "chicken-biryani.glb",
-    "usdz": "chicken-biryani.usdz",
-    "dimensionsCm": {
-      "width": 32,
-      "height": 9.1,
-      "depth": 29.8
-    },
-    "category": "Desi Mains",
-    "price": 1650,
-    "description": "Fragrant basmati layered with slow-cooked chicken, saffron, fried onions and whole spices. Served with raita.",
-    "credit": {
-      "author": "seirogan",
-      "source": "Sketchfab",
-      "url": "https://sketchfab.com/3d-models/biryani-5a77729ce40c4c77889a71bf60ff9ea9",
-      "license": "CC BY 4.0"
-    }
-  },
-  {
-    "id": "butter-chicken",
-    "name": "Butter Chicken",
-    "glb": "butter-chicken.glb",
-    "usdz": "butter-chicken.usdz",
-    "dimensionsCm": {
-      "width": 22,
-      "height": 6,
-      "depth": 16.2
-    },
-    "category": "Desi Mains",
-    "price": 1850,
-    "description": "Charcoal-grilled chicken in a velvety tomato and butter gravy, finished with cream and kasuri methi.",
-    "credit": {
-      "author": "seirogan",
-      "source": "Sketchfab",
-      "url": "https://sketchfab.com/3d-models/indian-curry-932a839e0ba646878225127096f888e8",
-      "license": "CC BY 4.0"
-    }
-  },
-  {
-    "id": "doner-kebab-plate",
-    "name": "Doner Kebab Plate",
-    "glb": "doner-kebab-plate.glb",
-    "usdz": "doner-kebab-plate.usdz",
-    "dimensionsCm": {
-      "width": 28,
-      "height": 8,
-      "depth": 28
-    },
-    "category": "Desi Mains",
-    "price": 1450,
-    "description": "Shaved spiced meat with grilled bread, fresh tomato, red onion and garlic sauce.",
-    "credit": {
-      "author": "Enlil Scan",
-      "source": "Sketchfab",
-      "url": "https://sketchfab.com/3d-models/kebab-0dad8550cccb4149a12f1f393e64b4b3",
-      "license": "CC BY 4.0"
-    }
-  },
-  {
     "id": "wood-fired-pizza",
-    "name": "Wood-Fired Pizza",
+    "name": "Bresaola & Rocket Pizza",
     "glb": "wood-fired-pizza.glb",
     "usdz": "wood-fired-pizza.usdz",
     "dimensionsCm": {
@@ -89,55 +9,28 @@
       "height": 5.5,
       "depth": 32
     },
-    "category": "Grill & Continental",
-    "price": 2400,
-    "description": "Twelve-inch hand-stretched base, San Marzano tomato, mozzarella, cured beef and fresh rocket.",
+    "category": "Pizza & Pasta",
+    "price": 19,
+    "description": "Twelve-inch wood-fired pizza on our 48-hour fermented dough, finished with air-dried beef and peppery rocket.",
     "credit": {
       "author": "Rigsters",
       "source": "Sketchfab",
       "url": "https://sketchfab.com/3d-models/pizza-40d50989fec1460f8838b608d999ccd0",
       "license": "CC BY 4.0"
-    }
-  },
-  {
-    "id": "burger-and-fries",
-    "name": "Smash Burger & Fries",
-    "glb": "burger-and-fries.glb",
-    "usdz": "burger-and-fries.usdz",
-    "dimensionsCm": {
-      "width": 32,
-      "height": 10.4,
-      "depth": 22.6
     },
-    "category": "Grill & Continental",
-    "price": 1750,
-    "description": "Double smashed beef patty, cheddar, lettuce, red onion and house sauce on a brioche bun, with skin-on fries.",
-    "credit": {
-      "author": "Keith Ito",
-      "source": "Sketchfab",
-      "url": "https://sketchfab.com/3d-models/burger-0d339a3a91304192b4fc8d61ebd48bb1",
-      "license": "CC BY 4.0"
-    }
-  },
-  {
-    "id": "grilled-steak",
-    "name": "Grilled T-Bone Steak",
-    "glb": "grilled-steak.glb",
-    "usdz": "grilled-steak.usdz",
-    "dimensionsCm": {
-      "width": 32,
-      "height": 8.6,
-      "depth": 32.1
-    },
-    "category": "Grill & Continental",
-    "price": 5900,
-    "description": "Dry-aged T-bone, flame-grilled and sliced, finished with sea salt and rosemary butter. Serves two.",
-    "credit": {
-      "author": "Shahriar Shahrabi",
-      "source": "Sketchfab",
-      "url": "https://sketchfab.com/3d-models/florence-steak-fiorentina-bistecca-969285ae788c41cd914387cecf088708",
-      "license": "CC BY 4.0"
-    }
+    "ingredients": [
+      "48-hour fermented dough",
+      "San Marzano tomato sauce",
+      "fior di latte mozzarella",
+      "beef bresaola",
+      "wild rocket",
+      "shaved parmesan",
+      "extra virgin olive oil"
+    ],
+    "allergens": [
+      "Gluten",
+      "Dairy"
+    ]
   },
   {
     "id": "pappardelle",
@@ -149,15 +42,97 @@
       "height": 12.6,
       "depth": 28
     },
-    "category": "Grill & Continental",
-    "price": 2100,
-    "description": "Ribbons of fresh egg pasta in a slow-braised beef ragu, with parmesan and basil.",
+    "category": "Pizza & Pasta",
+    "price": 24,
+    "description": "Ribbons of fresh egg pasta tossed in a beef ragù braised for six hours.",
     "credit": {
       "author": "BrandXR",
       "source": "Sketchfab",
       "url": "https://sketchfab.com/3d-models/the-grove-of-hobe-sound-main-pasta-plate-59dd03bd03484b248dff1961de2ef625",
       "license": "CC BY 4.0"
-    }
+    },
+    "ingredients": [
+      "fresh egg pappardelle",
+      "minced beef",
+      "soffritto of onion, carrot and celery",
+      "garlic",
+      "San Marzano tomatoes",
+      "beef stock",
+      "parmesan",
+      "fresh basil"
+    ],
+    "allergens": [
+      "Gluten",
+      "Egg",
+      "Dairy",
+      "Celery"
+    ]
+  },
+  {
+    "id": "grilled-steak",
+    "name": "Grilled T-Bone Steak",
+    "glb": "grilled-steak.glb",
+    "usdz": "grilled-steak.usdz",
+    "dimensionsCm": {
+      "width": 32,
+      "height": 8.6,
+      "depth": 32.1
+    },
+    "category": "From the Grill",
+    "price": 68,
+    "description": "800 g dry-aged T-bone, flame-grilled, rested and sliced at the pass. Serves two.",
+    "credit": {
+      "author": "Shahriar Shahrabi",
+      "source": "Sketchfab",
+      "url": "https://sketchfab.com/3d-models/florence-steak-fiorentina-bistecca-969285ae788c41cd914387cecf088708",
+      "license": "CC BY 4.0"
+    },
+    "ingredients": [
+      "dry-aged beef T-bone",
+      "sea salt flakes",
+      "cracked black pepper",
+      "rosemary and garlic butter"
+    ],
+    "allergens": [
+      "Dairy"
+    ]
+  },
+  {
+    "id": "burger-and-fries",
+    "name": "Smash Burger & Fries",
+    "glb": "burger-and-fries.glb",
+    "usdz": "burger-and-fries.usdz",
+    "dimensionsCm": {
+      "width": 32,
+      "height": 10.4,
+      "depth": 22.6
+    },
+    "category": "From the Grill",
+    "price": 18,
+    "description": "Two smashed beef patties with melted cheddar on a toasted brioche bun, served with skin-on fries.",
+    "credit": {
+      "author": "Keith Ito",
+      "source": "Sketchfab",
+      "url": "https://sketchfab.com/3d-models/burger-0d339a3a91304192b4fc8d61ebd48bb1",
+      "license": "CC BY 4.0"
+    },
+    "ingredients": [
+      "two 90 g beef patties",
+      "aged cheddar",
+      "brioche bun",
+      "iceberg lettuce",
+      "red onion",
+      "pickles",
+      "house sauce",
+      "skin-on fries"
+    ],
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Egg",
+      "Mustard",
+      "Sesame"
+    ]
   },
   {
     "id": "chocolate-fondant",
@@ -170,34 +145,27 @@
       "depth": 24.6
     },
     "category": "Desserts",
-    "price": 1150,
-    "description": "Warm dark chocolate fondant with a molten centre, dusted with cocoa.",
+    "price": 12,
+    "description": "Baked to order, with a molten center. Please allow 15 minutes.",
     "credit": {
       "author": "alban",
       "source": "Sketchfab",
       "url": "https://sketchfab.com/3d-models/chocolate-fondant-46b8d765218845f1872c0150815440e6",
       "license": "CC BY 4.0"
-    }
-  },
-  {
-    "id": "chocolate-mousse-cake",
-    "name": "Chocolate Mousse Cake",
-    "glb": "chocolate-mousse-cake.glb",
-    "usdz": "chocolate-mousse-cake.usdz",
-    "dimensionsCm": {
-      "width": 22,
-      "height": 7.9,
-      "depth": 22
     },
-    "category": "Desserts",
-    "price": 950,
-    "description": "Layered chocolate mousse cake on a cookie base, with whipped cream.",
-    "credit": {
-      "author": "Spenser C Dickerson",
-      "source": "Sketchfab",
-      "url": "https://sketchfab.com/3d-models/dessert-for-breakfast-eaad34d0a1ab47b0a2a29c83d6fc22ba",
-      "license": "CC BY 4.0"
-    }
+    "ingredients": [
+      "70% dark chocolate",
+      "butter",
+      "free-range eggs",
+      "caster sugar",
+      "plain flour",
+      "cocoa"
+    ],
+    "allergens": [
+      "Gluten",
+      "Egg",
+      "Dairy"
+    ]
   },
   {
     "id": "fruit-tart",
@@ -210,14 +178,29 @@
       "depth": 22.3
     },
     "category": "Desserts",
-    "price": 2600,
-    "description": "Buttery shortcrust filled with vanilla custard, topped with fresh berries and kiwi. Whole tart, serves six.",
+    "price": 42,
+    "description": "Crisp sweet pastry filled with vanilla custard and crowned with fresh fruit. Whole tart, serves six.",
     "credit": {
       "author": "Keith Ito",
       "source": "Sketchfab",
       "url": "https://sketchfab.com/3d-models/fruit-tart-e7822dcde0c448289e62daeb6075d680",
       "license": "CC BY 4.0"
-    }
+    },
+    "ingredients": [
+      "sweet shortcrust pastry",
+      "vanilla crème pâtissière",
+      "blueberries",
+      "strawberries",
+      "blackberries",
+      "raspberries",
+      "kiwi",
+      "apricot glaze"
+    ],
+    "allergens": [
+      "Gluten",
+      "Egg",
+      "Dairy"
+    ]
   },
   {
     "id": "beetroot-cheesecake",
@@ -230,33 +213,27 @@
       "depth": 23.2
     },
     "category": "Desserts",
-    "price": 1250,
-    "description": "Chef's special: baked beetroot cheesecake with meringue kisses and edible flowers.",
+    "price": 13,
+    "description": "Our signature dessert: baked cheesecake with roasted beetroot, meringue kisses and edible flowers.",
     "credit": {
       "author": "alban",
       "source": "Sketchfab",
       "url": "https://sketchfab.com/3d-models/beet-cheesecake-c1dbb267f8d34ca088ba2e14b4a0b28b",
       "license": "CC BY 4.0"
-    }
-  },
-  {
-    "id": "cappuccino",
-    "name": "Cappuccino",
-    "glb": "cappuccino.glb",
-    "usdz": "cappuccino.usdz",
-    "dimensionsCm": {
-      "width": 15,
-      "height": 6,
-      "depth": 15
     },
-    "category": "Coffee",
-    "price": 650,
-    "description": "Double shot espresso with silky steamed milk and latte art.",
-    "credit": {
-      "author": "Krzysztof Mazia",
-      "source": "Sketchfab",
-      "url": "https://sketchfab.com/3d-models/cup-of-cappuccino-2beccb20ab744cabaeaddb36487f5cd7",
-      "license": "CC BY 4.0"
-    }
+    "ingredients": [
+      "butter biscuit base",
+      "cream cheese",
+      "roasted beetroot",
+      "Madagascan vanilla",
+      "meringue kisses",
+      "beetroot crumb",
+      "edible flowers"
+    ],
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Egg"
+    ]
   }
 ]
