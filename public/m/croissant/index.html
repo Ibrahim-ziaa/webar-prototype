@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>Croissant in AR</title>
+  <link rel="stylesheet" href="../../style.css">
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js"></script>
+</head>
+<body>
+  <header>
+    <a href="../../">← All items</a>
+    <h1>Croissant</h1>
+    <p class="dims">Actual size: 20 × 6.2 × 7.6 cm (W × H × D)</p>
+  </header>
+
+  <model-viewer
+    src="../../models/croissant.glb"
+    alt="3D model of Croissant"
+    ar
+    ar-modes="webxr scene-viewer quick-look"
+    ar-scale="fixed"
+    ar-placement="floor"
+    camera-controls
+    touch-action="pan-y"
+    shadow-intensity="1"
+    environment-image="neutral">
+    <button slot="ar-button" class="ar-button">View on your table</button>
+    <div slot="progress-bar"></div>
+  </model-viewer>
+
+  <p id="ar-help" class="help" hidden>
+    AR is not available in this browser. On Android open this page in Chrome,
+    on iPhone open it in Safari. In-app browsers (WhatsApp, Instagram) often block AR.
+  </p>
+  <p class="help">Point your camera at a table and move the phone slowly until the item appears.</p>
+
+  <script>
+    const viewer = document.querySelector('model-viewer');
+    viewer.addEventListener('load', () => {
+      document.getElementById('ar-help').hidden = viewer.canActivateAR;
+    });
+    viewer.addEventListener('ar-status', (e) => {
+      if (e.detail.status === 'failed') document.getElementById('ar-help').hidden = false;
+    });
+  </script>
+</body>
+</html>

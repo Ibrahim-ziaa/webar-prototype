@@ -1,0 +1,35 @@
+[
+  {
+    "id": "avocado",
+    "name": "Avocado",
+    "glb": "avocado.glb",
+    "usdz": null,
+    "dimensionsCm": {
+      "width": 5.4,
+      "height": 8,
+      "depth": 3.5
+    }
+  },
+  {
+    "id": "carrot-cake",
+    "name": "Carrot Cake",
+    "glb": "carrot-cake.glb",
+    "usdz": null,
+    "dimensionsCm": {
+      "width": 22.5,
+      "height": 9.7,
+      "depth": 22.5
+    }
+  },
+  {
+    "id": "croissant",
+    "name": "Croissant",
+    "glb": "croissant.glb",
+    "usdz": null,
+    "dimensionsCm": {
+      "width": 20,
+      "height": 6.2,
+      "depth": 7.6
+    }
+  }
+]

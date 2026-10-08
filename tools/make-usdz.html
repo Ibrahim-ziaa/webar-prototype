@@ -1,0 +1,55 @@
+<!doctype html>
+<!--
+  Fallback for iPhone: turn a processed GLB into a USDZ file in your desktop browser.
+  Only needed if model-viewer's automatic USDZ (made on the iPhone itself) looks wrong.
+  Open http://localhost:8080/tools/make-usdz.html while "npm run serve" is running.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Make USDZ</title>
+  <script type="importmap">
+    { "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/"
+    } }
+  </script>
+  <style>body { font-family: system-ui, sans-serif; padding: 24px; max-width: 640px; }</style>
+</head>
+<body>
+  <h1>Make a USDZ for iPhone</h1>
+  <p>Pick a GLB from <code>public/models/</code>. The USDZ downloads to your computer.
+     Then re-run add-model with <code>--usdz &lt;file&gt;</code>, or copy it into
+     <code>public/models/</code> and set <code>"usdz"</code> in models.json.</p>
+  <input type="file" accept=".glb" id="file">
+  <p id="status"></p>
+
+  <script type="module">
+    import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+    import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
+    import { USDZExporter } from 'three/addons/exporters/USDZExporter.js';
+
+    const status = document.getElementById('status');
+    const loader = new GLTFLoader().setDRACOLoader(
+      new DRACOLoader().setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.5.7/')
+    );
+
+    document.getElementById('file').addEventListener('change', async (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      status.textContent = 'Converting…';
+      try {
+        const gltf = await loader.parseAsync(await file.arrayBuffer(), '');
+        const usdz = await new USDZExporter().parseAsync(gltf.scene);
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(new Blob([usdz], { type: 'model/vnd.usdz+zip' }));
+        a.download = file.name.replace(/\.glb$/i, '.usdz');
+        a.click();
+        status.textContent = `Done: ${a.download} (${(usdz.byteLength / 1024 / 1024).toFixed(2)} MB)`;
+      } catch (err) {
+        status.textContent = 'Failed: ' + err.message;
+      }
+    });
+  </script>
+</body>
+</html>
