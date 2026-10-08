@@ -1,102 +1,262 @@
 [
   {
-    "id": "strawberry-chocolate-cake",
-    "name": "Strawberry Chocolate Cake",
-    "glb": "strawberry-chocolate-cake.glb",
-    "usdz": "strawberry-chocolate-cake.usdz",
+    "id": "samosa",
+    "name": "Vegetable Samosa",
+    "glb": "samosa.glb",
+    "usdz": "samosa.usdz",
     "dimensionsCm": {
-      "width": 24.4,
-      "height": 7.9,
-      "depth": 24
+      "width": 18,
+      "height": 8.1,
+      "depth": 18
     },
-    "category": "Cakes",
-    "price": 3200,
-    "description": "Rich chocolate sponge topped with fresh sliced strawberries and chocolate crumb. Serves 8.",
-    "credit": {
-      "author": "Kuutti Siitonen",
-      "source": "Poly Haven",
-      "url": "https://polyhaven.com/a/strawberry_chocolate_cake",
-      "license": "CC0"
-    }
-  },
-  {
-    "id": "carrot-cake",
-    "name": "Carrot Cake",
-    "glb": "carrot-cake.glb",
-    "usdz": "carrot-cake.usdz",
-    "dimensionsCm": {
-      "width": 22.5,
-      "height": 9.7,
-      "depth": 22.5
-    },
-    "category": "Cakes",
-    "price": 2800,
-    "description": "Moist spiced carrot cake with cream cheese frosting and toasted walnuts. Serves 8.",
-    "credit": {
-      "author": "Greg Zaal, James Ray Cock",
-      "source": "Poly Haven",
-      "url": "https://polyhaven.com/a/carrot_cake",
-      "license": "CC0"
-    }
-  },
-  {
-    "id": "croissant",
-    "name": "Butter Croissant",
-    "glb": "croissant.glb",
-    "usdz": "croissant.usdz",
-    "dimensionsCm": {
-      "width": 20,
-      "height": 6.2,
-      "depth": 7.6
-    },
-    "category": "Bakery",
+    "category": "Starters",
     "price": 450,
-    "description": "Flaky, golden, all-butter croissant baked fresh every morning.",
+    "description": "Two crisp, hand-folded pastries filled with spiced potato and peas. Served with tamarind and mint chutney.",
     "credit": {
-      "author": "Dario Barresi, Greg Zaal",
-      "source": "Poly Haven",
-      "url": "https://polyhaven.com/a/croissant",
-      "license": "CC0"
+      "author": "seirogan",
+      "source": "Sketchfab",
+      "url": "https://sketchfab.com/3d-models/samosa-scans-with-iphone12-pro-trnio-63c8cc6b0f8a482cadc653b84019e784",
+      "license": "CC BY 4.0"
     }
   },
   {
-    "id": "bread-rolls",
-    "name": "Fresh Bread Rolls",
-    "glb": "bread-rolls.glb",
-    "usdz": "bread-rolls.usdz",
+    "id": "chicken-biryani",
+    "name": "Chicken Biryani",
+    "glb": "chicken-biryani.glb",
+    "usdz": "chicken-biryani.usdz",
     "dimensionsCm": {
-      "width": 39.7,
-      "height": 6.3,
-      "depth": 11.4
+      "width": 32,
+      "height": 9.1,
+      "depth": 29.8
     },
-    "category": "Bakery",
-    "price": 350,
-    "description": "Three soft, golden bread rolls, baked in house. Perfect with soup.",
+    "category": "Desi Mains",
+    "price": 1650,
+    "description": "Fragrant basmati layered with slow-cooked chicken, saffron, fried onions and whole spices. Served with raita.",
     "credit": {
-      "author": "Alexander Shulha",
-      "source": "Poly Haven",
-      "url": "https://polyhaven.com/a/hamburger_buns",
-      "license": "CC0"
+      "author": "seirogan",
+      "source": "Sketchfab",
+      "url": "https://sketchfab.com/3d-models/biryani-5a77729ce40c4c77889a71bf60ff9ea9",
+      "license": "CC BY 4.0"
     }
   },
   {
-    "id": "pomegranate",
-    "name": "Fresh Pomegranate",
-    "glb": "pomegranate.glb",
-    "usdz": "pomegranate.usdz",
+    "id": "butter-chicken",
+    "name": "Butter Chicken",
+    "glb": "butter-chicken.glb",
+    "usdz": "butter-chicken.usdz",
     "dimensionsCm": {
-      "width": 11.4,
-      "height": 11.5,
-      "depth": 11.5
+      "width": 22,
+      "height": 6,
+      "depth": 16.2
     },
-    "category": "Fresh",
-    "price": 300,
-    "description": "A whole seasonal anar (pomegranate), sweet and juicy. Ask us to juice it.",
+    "category": "Desi Mains",
+    "price": 1850,
+    "description": "Charcoal-grilled chicken in a velvety tomato and butter gravy, finished with cream and kasuri methi.",
     "credit": {
-      "author": "Oliver Harries",
-      "source": "Poly Haven",
-      "url": "https://polyhaven.com/a/food_pomegranate_01",
-      "license": "CC0"
+      "author": "seirogan",
+      "source": "Sketchfab",
+      "url": "https://sketchfab.com/3d-models/indian-curry-932a839e0ba646878225127096f888e8",
+      "license": "CC BY 4.0"
+    }
+  },
+  {
+    "id": "doner-kebab-plate",
+    "name": "Doner Kebab Plate",
+    "glb": "doner-kebab-plate.glb",
+    "usdz": "doner-kebab-plate.usdz",
+    "dimensionsCm": {
+      "width": 28,
+      "height": 8,
+      "depth": 28
+    },
+    "category": "Desi Mains",
+    "price": 1450,
+    "description": "Shaved spiced meat with grilled bread, fresh tomato, red onion and garlic sauce.",
+    "credit": {
+      "author": "Enlil Scan",
+      "source": "Sketchfab",
+      "url": "https://sketchfab.com/3d-models/kebab-0dad8550cccb4149a12f1f393e64b4b3",
+      "license": "CC BY 4.0"
+    }
+  },
+  {
+    "id": "wood-fired-pizza",
+    "name": "Wood-Fired Pizza",
+    "glb": "wood-fired-pizza.glb",
+    "usdz": "wood-fired-pizza.usdz",
+    "dimensionsCm": {
+      "width": 32,
+      "height": 5.5,
+      "depth": 32
+    },
+    "category": "Grill & Continental",
+    "price": 2400,
+    "description": "Twelve-inch hand-stretched base, San Marzano tomato, mozzarella, cured beef and fresh rocket.",
+    "credit": {
+      "author": "Rigsters",
+      "source": "Sketchfab",
+      "url": "https://sketchfab.com/3d-models/pizza-40d50989fec1460f8838b608d999ccd0",
+      "license": "CC BY 4.0"
+    }
+  },
+  {
+    "id": "burger-and-fries",
+    "name": "Smash Burger & Fries",
+    "glb": "burger-and-fries.glb",
+    "usdz": "burger-and-fries.usdz",
+    "dimensionsCm": {
+      "width": 32,
+      "height": 10.4,
+      "depth": 22.6
+    },
+    "category": "Grill & Continental",
+    "price": 1750,
+    "description": "Double smashed beef patty, cheddar, lettuce, red onion and house sauce on a brioche bun, with skin-on fries.",
+    "credit": {
+      "author": "Keith Ito",
+      "source": "Sketchfab",
+      "url": "https://sketchfab.com/3d-models/burger-0d339a3a91304192b4fc8d61ebd48bb1",
+      "license": "CC BY 4.0"
+    }
+  },
+  {
+    "id": "grilled-steak",
+    "name": "Grilled T-Bone Steak",
+    "glb": "grilled-steak.glb",
+    "usdz": "grilled-steak.usdz",
+    "dimensionsCm": {
+      "width": 32,
+      "height": 8.6,
+      "depth": 32.1
+    },
+    "category": "Grill & Continental",
+    "price": 5900,
+    "description": "Dry-aged T-bone, flame-grilled and sliced, finished with sea salt and rosemary butter. Serves two.",
+    "credit": {
+      "author": "Shahriar Shahrabi",
+      "source": "Sketchfab",
+      "url": "https://sketchfab.com/3d-models/florence-steak-fiorentina-bistecca-969285ae788c41cd914387cecf088708",
+      "license": "CC BY 4.0"
+    }
+  },
+  {
+    "id": "pappardelle",
+    "name": "Pappardelle Bolognese",
+    "glb": "pappardelle.glb",
+    "usdz": "pappardelle.usdz",
+    "dimensionsCm": {
+      "width": 28,
+      "height": 12.6,
+      "depth": 28
+    },
+    "category": "Grill & Continental",
+    "price": 2100,
+    "description": "Ribbons of fresh egg pasta in a slow-braised beef ragu, with parmesan and basil.",
+    "credit": {
+      "author": "BrandXR",
+      "source": "Sketchfab",
+      "url": "https://sketchfab.com/3d-models/the-grove-of-hobe-sound-main-pasta-plate-59dd03bd03484b248dff1961de2ef625",
+      "license": "CC BY 4.0"
+    }
+  },
+  {
+    "id": "chocolate-fondant",
+    "name": "Chocolate Fondant",
+    "glb": "chocolate-fondant.glb",
+    "usdz": "chocolate-fondant.usdz",
+    "dimensionsCm": {
+      "width": 25,
+      "height": 2.9,
+      "depth": 24.6
+    },
+    "category": "Desserts",
+    "price": 1150,
+    "description": "Warm dark chocolate fondant with a molten centre, dusted with cocoa.",
+    "credit": {
+      "author": "alban",
+      "source": "Sketchfab",
+      "url": "https://sketchfab.com/3d-models/chocolate-fondant-46b8d765218845f1872c0150815440e6",
+      "license": "CC BY 4.0"
+    }
+  },
+  {
+    "id": "chocolate-mousse-cake",
+    "name": "Chocolate Mousse Cake",
+    "glb": "chocolate-mousse-cake.glb",
+    "usdz": "chocolate-mousse-cake.usdz",
+    "dimensionsCm": {
+      "width": 22,
+      "height": 7.9,
+      "depth": 22
+    },
+    "category": "Desserts",
+    "price": 950,
+    "description": "Layered chocolate mousse cake on a cookie base, with whipped cream.",
+    "credit": {
+      "author": "Spenser C Dickerson",
+      "source": "Sketchfab",
+      "url": "https://sketchfab.com/3d-models/dessert-for-breakfast-eaad34d0a1ab47b0a2a29c83d6fc22ba",
+      "license": "CC BY 4.0"
+    }
+  },
+  {
+    "id": "fruit-tart",
+    "name": "Fresh Fruit Tart",
+    "glb": "fruit-tart.glb",
+    "usdz": "fruit-tart.usdz",
+    "dimensionsCm": {
+      "width": 22,
+      "height": 6.1,
+      "depth": 22.3
+    },
+    "category": "Desserts",
+    "price": 2600,
+    "description": "Buttery shortcrust filled with vanilla custard, topped with fresh berries and kiwi. Whole tart, serves six.",
+    "credit": {
+      "author": "Keith Ito",
+      "source": "Sketchfab",
+      "url": "https://sketchfab.com/3d-models/fruit-tart-e7822dcde0c448289e62daeb6075d680",
+      "license": "CC BY 4.0"
+    }
+  },
+  {
+    "id": "beetroot-cheesecake",
+    "name": "Beetroot Cheesecake",
+    "glb": "beetroot-cheesecake.glb",
+    "usdz": "beetroot-cheesecake.usdz",
+    "dimensionsCm": {
+      "width": 24,
+      "height": 6.6,
+      "depth": 23.2
+    },
+    "category": "Desserts",
+    "price": 1250,
+    "description": "Chef's special: baked beetroot cheesecake with meringue kisses and edible flowers.",
+    "credit": {
+      "author": "alban",
+      "source": "Sketchfab",
+      "url": "https://sketchfab.com/3d-models/beet-cheesecake-c1dbb267f8d34ca088ba2e14b4a0b28b",
+      "license": "CC BY 4.0"
+    }
+  },
+  {
+    "id": "cappuccino",
+    "name": "Cappuccino",
+    "glb": "cappuccino.glb",
+    "usdz": "cappuccino.usdz",
+    "dimensionsCm": {
+      "width": 15,
+      "height": 6,
+      "depth": 15
+    },
+    "category": "Coffee",
+    "price": 650,
+    "description": "Double shot espresso with silky steamed milk and latte art.",
+    "credit": {
+      "author": "Krzysztof Mazia",
+      "source": "Sketchfab",
+      "url": "https://sketchfab.com/3d-models/cup-of-cappuccino-2beccb20ab744cabaeaddb36487f5cd7",
+      "license": "CC BY 4.0"
     }
   }
 ]

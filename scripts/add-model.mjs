@@ -8,7 +8,9 @@
 //
 // Options:
 //   --texture-size <px>  max texture edge, default 2048
-//   --simplify <ratio>   keep this fraction of triangles, e.g. 0.5 (useful for dense scans)
+//   --max-triangles <n>  simplify dense scans down to about this many triangles, default 40000
+//                        (keeps the iPhone USDZ small, since USDZ geometry is not compressed)
+//   --simplify <ratio>   keep this fraction of triangles instead, e.g. 0.5
 //   --meshopt            use Meshopt instead of Draco (smaller, but see README on Android)
 //   --usdz <file>        a hand-made USDZ for iPhone (otherwise model-viewer generates one)
 
@@ -103,7 +105,9 @@ scene.addChild(wrapper);
 
 // 3. Optimize: clean up, resize textures, compress geometry.
 const steps = [dedup(), prune(), weld()];
-if (args.simplify) steps.push(simplify({ simplifier: MeshoptSimplifier, ratio: Number(args.simplify), error: 0.001 }));
+const triangles = countTriangles(doc);
+const ratio = args.simplify ? Number(args.simplify) : Math.min(1, Number(args['max-triangles'] || 40000) / triangles);
+if (ratio < 1) steps.push(simplify({ simplifier: MeshoptSimplifier, ratio, error: 0.01 }));
 const textureSize = Number(args['texture-size'] || 2048);
 steps.push(args.meshopt ? meshopt({ encoder: MeshoptEncoder }) : draco());
 await doc.transform(...steps);
@@ -138,7 +142,7 @@ if (existing) models[models.indexOf(existing)] = entry;
 else models.push(entry);
 writeModels(models);
 
-console.log(`Output: ${path.relative(process.cwd(), outFile)} (${formatMB(outBytes)})`);
+console.log(`Output: ${path.relative(process.cwd(), outFile)} (${formatMB(outBytes)}, ${countTriangles(doc).toLocaleString('en-US')} triangles, was ${triangles.toLocaleString('en-US')})`);
 console.log(`Real size: ${dimensionsCm[0]} W x ${dimensionsCm[1]} H x ${dimensionsCm[2]} D cm`);
 if (outBytes > TARGET_BYTES) {
   console.log(`Over the 5 MB target. Try --texture-size 1024 and/or --simplify 0.5.`);
@@ -146,6 +150,17 @@ if (outBytes > TARGET_BYTES) {
   console.log('Under the 5 MB target.');
 }
 console.log('Run "npm run build" to regenerate the pages.');
+
+function countTriangles(doc) {
+  let n = 0;
+  for (const mesh of doc.getRoot().listMeshes()) {
+    for (const prim of mesh.listPrimitives()) {
+      const indices = prim.getIndices();
+      n += (indices ? indices.getCount() : prim.getAttribute('POSITION').getCount()) / 3;
+    }
+  }
+  return n;
+}
 
 // Resize every texture to fit maxSize. Opaque images become JPEG (much smaller);
 // images with real transparency stay PNG so cut-outs keep working.
