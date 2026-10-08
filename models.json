@@ -3,7 +3,7 @@
     "id": "avocado",
     "name": "Avocado",
     "glb": "avocado.glb",
-    "usdz": null,
+    "usdz": "avocado.usdz",
     "dimensionsCm": {
       "width": 5.4,
       "height": 8,
@@ -14,7 +14,7 @@
     "id": "carrot-cake",
     "name": "Carrot Cake",
     "glb": "carrot-cake.glb",
-    "usdz": null,
+    "usdz": "carrot-cake.usdz",
     "dimensionsCm": {
       "width": 22.5,
       "height": 9.7,
@@ -25,7 +25,7 @@
     "id": "croissant",
     "name": "Croissant",
     "glb": "croissant.glb",
-    "usdz": null,
+    "usdz": "croissant.usdz",
     "dimensionsCm": {
       "width": 20,
       "height": 6.2,

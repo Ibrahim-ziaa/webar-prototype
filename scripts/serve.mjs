@@ -27,6 +27,8 @@ const TYPES = {
 };
 
 http.createServer((req, res) => {
+  // Log each request with its device, so you can see what a phone fetched during AR.
+  console.log(new Date().toLocaleTimeString(), req.method, req.url, '|', req.headers['user-agent'] || '');
   const urlPath = decodeURIComponent(new URL(req.url, 'http://x').pathname);
   const base = urlPath.startsWith('/tools/') ? ROOT : PUBLIC;
   let file = path.normalize(path.join(base, urlPath));
