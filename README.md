@@ -42,7 +42,7 @@ To remove a model, delete its entry from `models.json` and its files in `public/
 
 ### iPhone USDZ
 
-By default nothing extra is needed: when someone taps the AR button, model-viewer builds a USDZ on the iPhone itself. If the iPhone result looks wrong (missing textures, wrong materials), make a USDZ yourself:
+Ship a USDZ with every model. Without one, model-viewer builds it on the iPhone when AR is tapped, and on bigger scans that can fail and leave Quick Look blank. To make one:
 
 1. `npm run serve`, then open http://localhost:8080/tools/make-usdz.html on your computer
 2. Pick `public/models/<id>.glb`; a `.usdz` downloads
@@ -81,7 +81,7 @@ Only `public/` needs to be hosted. Make sure `.usdz` files are served as `model/
 |---|---|---|
 | **Netlify** | Drag the `public/` folder onto app.netlify.com/drop, or connect the GitHub repo with publish directory `public` | Free tier, works with private repos, address like `name.netlify.app` |
 | **Vercel** | Import the repo, framework "Other", output directory `public`, no build command | Free Hobby tier is for non-commercial use, so check the terms before using it for restaurants |
-| **GitHub Pages** | Settings > Pages > deploy with a GitHub Actions "static HTML" workflow pointing at `public/` | Free for **public** repos only. This repo is private, so Pages needs GitHub Pro or a public repo |
+| **GitHub Pages** (in use) | Already set up: `.github/workflows/pages.yml` publishes `public/` on every push to `main` | Free for public repos. Live at https://ibrahim-ziaa.github.io/webar-prototype/ |
 
 All three give HTTPS automatically. A custom domain (for example `menu.yourbrand.pk`) can be added later on any of them.
 
