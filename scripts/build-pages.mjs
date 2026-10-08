@@ -28,12 +28,13 @@ function price(m) {
 function dish(m) {
   return `
       <article class="dish" id="${m.id}">
-        <img src="posters/${m.id}.webp" alt="${escapeHtml(m.name)}" loading="lazy" width="640" height="480">
-        <div class="dish-body">
-          <h3><span>${escapeHtml(m.name)}</span><span class="leader"></span><span class="price">${price(m)}</span></h3>
-          <p>${escapeHtml(m.description || '')}</p>
-          <button class="see" data-id="${m.id}">See it on your table</button>
-        </div>
+        <button class="photo" data-id="${m.id}" aria-label="See ${escapeHtml(m.name)} in 3D">
+          <img src="posters/${m.id}.webp" alt="${escapeHtml(m.name)}" loading="lazy" width="640" height="480">
+          <span class="badge">3D · AR</span>
+        </button>
+        <h3><span>${escapeHtml(m.name)}</span><span class="leader"></span><span class="price">${price(m)}</span></h3>
+        <p>${escapeHtml(m.description || '')}</p>
+        <button class="see" data-id="${m.id}">See it on your table</button>
       </article>`;
 }
 
@@ -45,7 +46,9 @@ function menuPage() {
 
   const sections = categories.map((c) => `
     <section id="cat-${c.toLowerCase()}">
-      <h2>${escapeHtml(c)}</h2>${inCategory(c).map(dish).join('')}
+      <h2>${escapeHtml(c)}</h2>
+      <div class="grid">${inCategory(c).map(dish).join('')}
+      </div>
     </section>`).join('');
 
   const data = Object.fromEntries(models.map((m) => [m.id, {
@@ -135,7 +138,7 @@ function menuPage() {
       history.replaceState(null, '', '#' + id);
     }
 
-    document.querySelectorAll('.see').forEach((b) => b.addEventListener('click', () => open(b.dataset.id)));
+    document.querySelectorAll('.see, .photo').forEach((b) => b.addEventListener('click', () => open(b.dataset.id)));
     dialog.querySelector('.close').addEventListener('click', () => dialog.close());
     dialog.addEventListener('close', () => history.replaceState(null, '', location.pathname));
     viewer.addEventListener('load', () => { help.hidden = viewer.canActivateAR; });

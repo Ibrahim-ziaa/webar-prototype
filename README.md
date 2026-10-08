@@ -53,7 +53,8 @@ and make its iPhone file (see below).
 * Give **one** real dimension in centimeters: `--height`, `--width` (left to right) or `--depth` (front to back). The model is scaled uniformly to match, set on its base and centered. Measure the real plate with a ruler and use its biggest dimension. If you leave all three out, the file's own size is kept (glTF units are meters, and phone scanning apps usually export real scale).
 * Re-running add-model for an existing id keeps its price, description and category.
 * Input formats: `.glb` / `.gltf` and `.obj` work out of the box. `.fbx` and `.usdz` need [Blender](https://www.blender.org) (free) installed. If you don't have it, export GLB from your scanning app instead.
-* The script prints the final file size and real dimensions. The target is under 5 MB. If a model is over that, add `--texture-size 1024` and/or `--simplify 0.5` (this keeps half the triangles, which helps with dense scans).
+* Dense scans are simplified to about 40,000 triangles (`--max-triangles` changes this). That keeps the iPhone USDZ around 5 MB, because USDZ geometry is not compressed.
+* The script prints the final file size, triangle count and real dimensions. The target is under 5 MB. If a model is over that, add `--texture-size 1024`.
 * Compression uses Draco by default because Scene Viewer supports it. `--meshopt` makes smaller files, but I have not confirmed Scene Viewer reads Meshopt, so test on Android before using it.
 
 To use a free scan from [Poly Haven](https://polyhaven.com/models), run `npm run fetch-polyhaven -- <asset-id>` (the last part of the asset's URL). It prints the exact add-model command, with the real size.
@@ -91,7 +92,13 @@ cloudflared prints a random `https://<words>.trycloudflare.com` address. **Anyon
 npm run qr -- --base https://ibrahim-ziaa.github.io/webar-prototype
 ```
 
-This writes `qr/menu.png` (1200 × 1500 px, about 10 × 12.7 cm at 300 dpi) with the restaurant name underneath. There is one code for the whole menu. Add `--dish <id>` to also make a code that opens one dish directly. Make codes only once the address is permanent, because a printed code can't be changed. Test the printed code with both an Android phone and an iPhone.
+This writes a table card styled like the menu:
+
+* `qr/menu-card.pdf`: A6 card (105 × 148 mm), ready for a print shop or an acrylic table stand
+* `qr/menu-card.png`: the same card as a 300 dpi image
+* `qr/menu-qr.png`: the bare code, for a designer
+
+There is one code for the whole menu. A link ending in `#<dish-id>` opens one dish directly. Print only once the address is permanent, because a printed code can't be changed. Test the printed card with both an Android phone and an iPhone.
 
 ## Free hosting
 
@@ -116,12 +123,18 @@ All three give HTTPS automatically. A custom domain (for example `menu.yourbrand
 
 ## Sample dish credits
 
-The demo dishes are real photo scans from [Poly Haven](https://polyhaven.com), all CC0 (free for commercial use, no credit required). Credits are also shown in the menu footer, from `models.json`.
+The demo dishes are real photo scans published on [Sketchfab](https://sketchfab.com) under **CC BY 4.0**, which allows commercial use as long as the author is credited. The menu footer shows the credits (from `models.json`). They were downloaded without an account through [Objaverse](https://huggingface.co/datasets/allenai/objaverse), a public mirror of Sketchfab's free models.
 
-* Strawberry Chocolate Cake: Kuutti Siitonen
-* Carrot Cake: Greg Zaal, James Ray Cock
-* Butter Croissant: Dario Barresi, Greg Zaal
-* Fresh Bread Rolls: Alexander Shulha
-* Fresh Pomegranate: Oliver Harries
+| Dish | Scan by |
+|---|---|
+| Vegetable Samosa, Chicken Biryani, Butter Chicken | seirogan |
+| Doner Kebab Plate | Enlil Scan |
+| Wood-Fired Pizza | Rigsters |
+| Smash Burger & Fries, Fresh Fruit Tart | Keith Ito |
+| Grilled T-Bone Steak | Shahriar Shahrabi |
+| Pappardelle Bolognese | BrandXR |
+| Chocolate Fondant, Beetroot Cheesecake | alban |
+| Chocolate Mousse Cake | Spenser C Dickerson |
+| Cappuccino | Krzysztof Mazia |
 
-Prices and descriptions are placeholders, and "The Demo Bakehouse" is a made-up name.
+Dish names, prices and descriptions are placeholders written for the demo, and "The Demo Kitchen" is a made-up name. For a real restaurant, scan its own dishes.

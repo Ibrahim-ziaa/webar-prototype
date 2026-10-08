@@ -1,6 +1,6 @@
 {
-  "name": "The Demo Bakehouse",
-  "tagline": "Cakes, bakes and fresh fruit",
+  "name": "The Demo Kitchen",
+  "tagline": "Desi classics, grills and desserts",
   "currency": "Rs",
-  "categories": ["Cakes", "Bakery", "Fresh"]
+  "categories": ["Starters", "Desi Mains", "Grill & Continental", "Desserts", "Coffee"]
 }
