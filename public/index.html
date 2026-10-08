@@ -2,20 +2,137 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#14110f">
   <link rel="icon" href="data:,">
-  <title>AR Menu</title>
+  <title>The Demo Bakehouse · Menu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500&display=swap">
   <link rel="stylesheet" href="style.css">
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js"></script>
 </head>
 <body>
-  <header>
-    <h1>AR Menu</h1>
-    <p>Tap an item, then "View on your table".</p>
+  <header class="masthead">
+    <p class="eyebrow">Menu</p>
+    <h1>The Demo Bakehouse</h1>
+    <p class="tagline">Cakes, bakes and fresh fruit</p>
+    <div class="ornament"><span></span>◆<span></span></div>
+    <p class="hint">Tap <em>See it on your table</em> to place any dish in front of you, at its real size.</p>
   </header>
-  <ul class="list">
-    <li><a href="m/avocado/"><strong>Avocado</strong><span>5.4 × 8 × 3.5 cm</span></a></li>
-    <li><a href="m/carrot-cake/"><strong>Carrot Cake</strong><span>22.5 × 9.7 × 22.5 cm</span></a></li>
-    <li><a href="m/croissant/"><strong>Croissant</strong><span>20 × 6.2 × 7.6 cm</span></a></li>
-  </ul>
+
+  <nav class="tabs"><a href="#cat-cakes">Cakes</a><a href="#cat-bakery">Bakery</a><a href="#cat-fresh">Fresh</a></nav>
+
+  <main>
+    <section id="cat-cakes">
+      <h2>Cakes</h2>
+      <article class="dish" id="strawberry-chocolate-cake">
+        <img src="posters/strawberry-chocolate-cake.webp" alt="Strawberry Chocolate Cake" loading="lazy" width="640" height="480">
+        <div class="dish-body">
+          <h3><span>Strawberry Chocolate Cake</span><span class="leader"></span><span class="price">Rs 3,200</span></h3>
+          <p>Rich chocolate sponge topped with fresh sliced strawberries and chocolate crumb. Serves 8.</p>
+          <button class="see" data-id="strawberry-chocolate-cake">See it on your table</button>
+        </div>
+      </article>
+      <article class="dish" id="carrot-cake">
+        <img src="posters/carrot-cake.webp" alt="Carrot Cake" loading="lazy" width="640" height="480">
+        <div class="dish-body">
+          <h3><span>Carrot Cake</span><span class="leader"></span><span class="price">Rs 2,800</span></h3>
+          <p>Moist spiced carrot cake with cream cheese frosting and toasted walnuts. Serves 8.</p>
+          <button class="see" data-id="carrot-cake">See it on your table</button>
+        </div>
+      </article>
+    </section>
+    <section id="cat-bakery">
+      <h2>Bakery</h2>
+      <article class="dish" id="croissant">
+        <img src="posters/croissant.webp" alt="Butter Croissant" loading="lazy" width="640" height="480">
+        <div class="dish-body">
+          <h3><span>Butter Croissant</span><span class="leader"></span><span class="price">Rs 450</span></h3>
+          <p>Flaky, golden, all-butter croissant baked fresh every morning.</p>
+          <button class="see" data-id="croissant">See it on your table</button>
+        </div>
+      </article>
+      <article class="dish" id="bread-rolls">
+        <img src="posters/bread-rolls.webp" alt="Fresh Bread Rolls" loading="lazy" width="640" height="480">
+        <div class="dish-body">
+          <h3><span>Fresh Bread Rolls</span><span class="leader"></span><span class="price">Rs 350</span></h3>
+          <p>Three soft, golden bread rolls, baked in house. Perfect with soup.</p>
+          <button class="see" data-id="bread-rolls">See it on your table</button>
+        </div>
+      </article>
+    </section>
+    <section id="cat-fresh">
+      <h2>Fresh</h2>
+      <article class="dish" id="pomegranate">
+        <img src="posters/pomegranate.webp" alt="Fresh Pomegranate" loading="lazy" width="640" height="480">
+        <div class="dish-body">
+          <h3><span>Fresh Pomegranate</span><span class="leader"></span><span class="price">Rs 300</span></h3>
+          <p>A whole seasonal anar (pomegranate), sweet and juicy. Ask us to juice it.</p>
+          <button class="see" data-id="pomegranate">See it on your table</button>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>Prices in Pakistani Rupees, inclusive of tax.</p>
+    <p class="credits">3D scans: Strawberry Chocolate Cake: Kuutti Siitonen / <a href="https://polyhaven.com/a/strawberry_chocolate_cake">Poly Haven</a> (CC0)<br>Carrot Cake: Greg Zaal, James Ray Cock / <a href="https://polyhaven.com/a/carrot_cake">Poly Haven</a> (CC0)<br>Butter Croissant: Dario Barresi, Greg Zaal / <a href="https://polyhaven.com/a/croissant">Poly Haven</a> (CC0)<br>Fresh Bread Rolls: Alexander Shulha / <a href="https://polyhaven.com/a/hamburger_buns">Poly Haven</a> (CC0)<br>Fresh Pomegranate: Oliver Harries / <a href="https://polyhaven.com/a/food_pomegranate_01">Poly Haven</a> (CC0)</p>
+  </footer>
+
+  <dialog id="viewer">
+    <button class="close" aria-label="Close">✕</button>
+    <model-viewer
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      ar-scale="fixed"
+      ar-placement="floor"
+      camera-controls
+      camera-orbit="25deg 62deg auto"
+      touch-action="pan-y"
+      shadow-intensity="1"
+      environment-image="neutral">
+      <button slot="ar-button" class="ar-button">View on your table</button>
+    </model-viewer>
+    <div class="viewer-info">
+      <h3><span id="v-name"></span><span class="price" id="v-price"></span></h3>
+      <p id="v-size"></p>
+      <p id="v-help" class="warn" hidden>
+        AR isn't available in this browser. On Android open this menu in Chrome, on iPhone in Safari.
+        In-app browsers (WhatsApp, Instagram) usually block AR. You can still turn the dish around above.
+      </p>
+    </div>
+  </dialog>
+
+  <script>
+    const DISHES = {"strawberry-chocolate-cake":{"name":"Strawberry Chocolate Cake","price":"Rs 3,200","size":"24 × 24 cm, 8 cm tall","glb":"models/strawberry-chocolate-cake.glb","usdz":"models/strawberry-chocolate-cake.usdz","poster":"posters/strawberry-chocolate-cake.webp"},"carrot-cake":{"name":"Carrot Cake","price":"Rs 2,800","size":"23 × 23 cm, 10 cm tall","glb":"models/carrot-cake.glb","usdz":"models/carrot-cake.usdz","poster":"posters/carrot-cake.webp"},"croissant":{"name":"Butter Croissant","price":"Rs 450","size":"20 × 8 cm, 6 cm tall","glb":"models/croissant.glb","usdz":"models/croissant.usdz","poster":"posters/croissant.webp"},"bread-rolls":{"name":"Fresh Bread Rolls","price":"Rs 350","size":"40 × 11 cm, 6 cm tall","glb":"models/bread-rolls.glb","usdz":"models/bread-rolls.usdz","poster":"posters/bread-rolls.webp"},"pomegranate":{"name":"Fresh Pomegranate","price":"Rs 300","size":"11 × 12 cm, 12 cm tall","glb":"models/pomegranate.glb","usdz":"models/pomegranate.usdz","poster":"posters/pomegranate.webp"}};
+    const dialog = document.getElementById('viewer');
+    const viewer = dialog.querySelector('model-viewer');
+    const help = document.getElementById('v-help');
+
+    function open(id) {
+      const d = DISHES[id];
+      if (!d) return;
+      viewer.poster = d.poster;
+      if (d.usdz) viewer.setAttribute('ios-src', d.usdz); else viewer.removeAttribute('ios-src');
+      viewer.src = d.glb;
+      viewer.alt = '3D model of ' + d.name;
+      document.getElementById('v-name').textContent = d.name;
+      document.getElementById('v-price').textContent = d.price;
+      document.getElementById('v-size').textContent = 'Actual size: ' + d.size;
+      help.hidden = true;
+      dialog.showModal();
+      history.replaceState(null, '', '#' + id);
+    }
+
+    document.querySelectorAll('.see').forEach((b) => b.addEventListener('click', () => open(b.dataset.id)));
+    dialog.querySelector('.close').addEventListener('click', () => dialog.close());
+    dialog.addEventListener('close', () => history.replaceState(null, '', location.pathname));
+    viewer.addEventListener('load', () => { help.hidden = viewer.canActivateAR; });
+    viewer.addEventListener('ar-status', (e) => { if (e.detail.status === 'failed') help.hidden = false; });
+
+    // A link like menu/#carrot-cake opens that dish straight away.
+    if (DISHES[location.hash.slice(1)]) open(location.hash.slice(1));
+  </script>
 </body>
 </html>

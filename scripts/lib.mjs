@@ -36,3 +36,9 @@ export function formatMB(bytes) {
 export function escapeHtml(s) {
   return String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 }
+
+export const MODEL_VIEWER = 'https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js';
+
+export function readRestaurant() {
+  return JSON.parse(fs.readFileSync(path.join(ROOT, 'restaurant.json'), 'utf8'));
+}
